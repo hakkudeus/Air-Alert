@@ -36,10 +36,11 @@ Currently planning to switch to NSIS or InstallShield.
 |Multiple Resolutions  |`By Default`   |`⚒ In progress` |`?`|
 |16 Color Support      |`By Default`|`⚒ In progress`|`?`|
 |Settings Menu|`-`|`⚒ In progress`|`?`|
+|Don't rely on mTCP|`-`|`⚒ To be planned`|`?`|
 |Rewrite in C|`⚒ To be planned`|`✅ Already on C`|`?`|
 
 A third branch is being planned to add Windows 3.11 support, however it's in too early stage and may be merged with one of previous ones/use their features or ideas. 
-# System Requirement
+# System Requirements
 If you plan to use my pre-built code, check up the requirements:
 |                |Main Branch       |
 |----------------|-------------------------------|
@@ -68,6 +69,12 @@ If you plan to use my pre-built code, check up the requirements:
 ⁴ Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip.
 
 ⁵ An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
+# Pre-packaged contents
+If you have decided to download a pre-built package by me, you may have noticed it comes in two variants:
+- IMA Floppy Image - authentical 1.44M image for retro workstation;
+- ZIP Archive - for modern machines to be run out-of-box;
+Their contents should be the same, including the app itself, "promo" materials, help files and installers. It does **not** come with source code.
+
 # Outro
 You contact me here through:
 * the Issues page, 
