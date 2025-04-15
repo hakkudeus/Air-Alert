@@ -1,0 +1,1066 @@
+unit Airalert;
+
+interface
+
+uses
+  SysUtils, WinTypes, WinProcs, Messages, Classes, Graphics, Controls,
+  Forms, Dialogs, StdCtrls, ExtCtrls, Menus, Gauges, Unit2;
+
+type
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    webStatus: TPanel;
+    Gauge1: TGauge;
+    GroupBox2: TGroupBox;
+    Button1: TButton;
+    GroupBox3: TGroupBox;
+    MainMenu1: TMainMenu;
+    File1: TMenuItem;
+    Help1: TMenuItem;
+    About1: TMenuItem;
+    Exit1: TMenuItem;
+    Panel2: TPanel;
+    mapPh: TImage;
+    debugButtonTab: TMenuItem;
+    GroupBox4: TGroupBox;
+    CheckBox1: TCheckBox;
+    regChernih: TImage;
+    regPolt: TImage;
+    regSum: TImage;
+    regKha: TImage;
+    regDon: TImage;
+    regLuh: TImage;
+    regDn: TImage;
+    regZap: TImage;
+    regKher: TImage;
+    regCrimea: TImage;
+    regMyk: TImage;
+    regOdes: TImage;
+    regKyro: TImage;
+    regCherk: TImage;
+    regKyiv: TImage;
+    regZhyt: TImage;
+    regRivn: TImage;
+    regVol: TImage;
+    regLviv: TImage;
+    regZak: TImage;
+    regIvano: TImage;
+    regTern: TImage;
+    regChmeln: TImage;
+    regVin: TImage;
+    regCherniv: TImage;
+    regKyivCity: TImage;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    CheckBox4: TCheckBox;
+    CheckBox5: TCheckBox;
+    CheckBox6: TCheckBox;
+    CheckBox7: TCheckBox;
+    CheckBox8: TCheckBox;
+    CheckBox9: TCheckBox;
+    CheckBox10: TCheckBox;
+    CheckBox11: TCheckBox;
+    CheckBox12: TCheckBox;
+    CheckBox13: TCheckBox;
+    CheckBox14: TCheckBox;
+    CheckBox15: TCheckBox;
+    CheckBox16: TCheckBox;
+    CheckBox17: TCheckBox;
+    CheckBox18: TCheckBox;
+    CheckBox19: TCheckBox;
+    CheckBox20: TCheckBox;
+    CheckBox21: TCheckBox;
+    CheckBox22: TCheckBox;
+    CheckBox23: TCheckBox;
+    CheckBox24: TCheckBox;
+    CheckBox25: TCheckBox;
+    CheckBox26: TCheckBox;
+    CheckBox27: TCheckBox;
+    clockTimer: TLabel;
+    Timer1: TTimer;
+    fullscrSwitch: TCheckBox;
+    break: TMenuItem;
+    Deselect1: TMenuItem;
+    Fullscreen1: TMenuItem;
+    Label2: TLabel;
+    Update1: TMenuItem;
+    updateBtn: TButton;
+    statusBox: TGroupBox;
+    statusVin: TImage;
+    Label4: TLabel;
+    Label5: TLabel;
+    Image2: TImage;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Label26: TLabel;
+    Label27: TLabel;
+    Label28: TLabel;
+    Label29: TLabel;
+    Image3: TImage;
+    Image4: TImage;
+    Image5: TImage;
+    Image6: TImage;
+    Image7: TImage;
+    Image8: TImage;
+    Image9: TImage;
+    Image10: TImage;
+    Image11: TImage;
+    Image12: TImage;
+    Image13: TImage;
+    Image14: TImage;
+    Image15: TImage;
+    Image16: TImage;
+    Image17: TImage;
+    Image18: TImage;
+    Image19: TImage;
+    Image20: TImage;
+    Image21: TImage;
+    Image22: TImage;
+    Image23: TImage;
+    Image24: TImage;
+    Image25: TImage;
+    Image26: TImage;
+    Image27: TImage;
+    Image28: TImage;
+    Image29: TImage;
+    Image30: TImage;
+    Image31: TImage;
+    Image32: TImage;
+    Image33: TImage;
+    Image34: TImage;
+    Image35: TImage;
+    Image36: TImage;
+    Image37: TImage;
+    Image38: TImage;
+    Image39: TImage;
+    Image40: TImage;
+    statusZak: TImage;
+    statusKyivCity: TImage;
+    statusVol: TImage;
+    statusDn: TImage;
+    statusDon: TImage;
+    statusZhyt: TImage;
+    statusZap: TImage;
+    statusIvano: TImage;
+    statusKyiv: TImage;
+    statusKyro: TImage;
+    statusLuh: TImage;
+    statusLviv: TImage;
+    statusMyk: TImage;
+    statusOdes: TImage;
+    statusPolt: TImage;
+    statusRivn: TImage;
+    statusSum: TImage;
+    statusTern: TImage;
+    statusKha: TImage;
+    statusKher: TImage;
+    statusChmeln: TImage;
+    statusCherk: TImage;
+    statusCherniv: TImage;
+    statusChernih: TImage;
+    statusCrimea: TImage;
+    Image1: TImage;
+    Image41: TImage;
+    countdown: TLabel;
+    Label3: TLabel;
+    Label30: TLabel;
+    hoverHint: TLabel;
+    activeHint: TImage;
+    Label1: TLabel;
+    deselectBtn: TButton;
+    Language1: TMenuItem;
+    UAlang: TMenuItem;
+    ENlang: TMenuItem;
+    Settings1: TMenuItem;
+    Connect1: TMenuItem;
+    Disconnect1: TMenuItem;
+    procedure About1Click(Sender: TObject);
+    procedure Exit1Click(Sender: TObject);
+    procedure debugButtonTabClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure CheckBox1Click(Sender: TObject);
+    procedure CheckBox3Click(Sender: TObject);
+    procedure CheckBox5Click(Sender: TObject);
+    procedure CheckBox7Click(Sender: TObject);
+    procedure CheckBox13Click(Sender: TObject);
+    procedure CheckBox15Click(Sender: TObject);
+    procedure CheckBox17Click(Sender: TObject);
+    procedure CheckBox18Click(Sender: TObject);
+    procedure CheckBox19Click(Sender: TObject);
+    procedure CheckBox20Click(Sender: TObject);
+    procedure CheckBox21Click(Sender: TObject);
+    procedure CheckBox24Click(Sender: TObject);
+    procedure CheckBox25Click(Sender: TObject);
+    procedure CheckBox2Click(Sender: TObject);
+    procedure CheckBox4Click(Sender: TObject);
+    procedure CheckBox6Click(Sender: TObject);
+    procedure CheckBox12Click(Sender: TObject);
+    procedure CheckBox14Click(Sender: TObject);
+    procedure CheckBox16Click(Sender: TObject);
+    procedure CheckBox8Click(Sender: TObject);
+    procedure CheckBox9Click(Sender: TObject);
+    procedure CheckBox10Click(Sender: TObject);
+    procedure CheckBox11Click(Sender: TObject);
+    procedure CheckBox22Click(Sender: TObject);
+    procedure CheckBox23Click(Sender: TObject);
+    procedure CheckBox26Click(Sender: TObject);
+    procedure CheckBox27Click(Sender: TObject);
+    procedure regKyivCityClick(Sender: TObject);
+    procedure regChernihClick(Sender: TObject);
+    procedure regKyivClick(Sender: TObject);
+    procedure regZhytClick(Sender: TObject);
+    procedure regRivnClick(Sender: TObject);
+    procedure regVolClick(Sender: TObject);
+    procedure regLvivClick(Sender: TObject);
+    procedure regZakClick(Sender: TObject);
+    procedure regIvanoClick(Sender: TObject);
+    procedure regChernivClick(Sender: TObject);
+    procedure regTernClick(Sender: TObject);
+    procedure regVinClick(Sender: TObject);
+    procedure regOdesClick(Sender: TObject);
+    procedure regMykClick(Sender: TObject);
+    procedure regKyroClick(Sender: TObject);
+    procedure regCherkClick(Sender: TObject);
+    procedure regPoltClick(Sender: TObject);
+    procedure regSumClick(Sender: TObject);
+    procedure regDnClick(Sender: TObject);
+    procedure regKherClick(Sender: TObject);
+    procedure regCrimeaClick(Sender: TObject);
+    procedure regZapClick(Sender: TObject);
+    procedure regDonClick(Sender: TObject);
+    procedure regKhaClick(Sender: TObject);
+    procedure regLuhClick(Sender: TObject);
+    procedure regChmelnClick(Sender: TObject);
+    procedure deselectBtnClick(Sender: TObject);
+    procedure Deselect1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.DFM}
+
+procedure TForm1.About1Click(Sender: TObject);
+begin
+     AboutBox.Show;
+end;
+
+procedure TForm1.Exit1Click(Sender: TObject);
+begin
+     Application.Terminate;
+end;
+
+procedure TForm1.debugButtonTabClick(Sender: TObject);
+begin
+(* this button on title bar will show/hide
+debug menu *)
+    if debugButtonTab.Checked = false then
+    begin
+    Width := 570;
+    webStatus.Width := 599;
+    debugButtonTab.Checked := true;
+    end
+    else if debugButtonTab.Checked = true then
+    begin
+    Width := 433;
+    webStatus.Width := 479;
+    debugButtonTab.Checked := false;
+    end;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+{* Set parameters to defaults*}
+
+     Height := 380;
+     Width := 433;
+     webStatus.Width := 438;
+
+     debugButtonTab.Checked := false;
+     webStatus.Caption := 'Connecting...';
+     fullscrSwitch.Enabled := false;
+
+     regVol.Visible := false;
+     regLviv.Visible := false;
+     regZak.Visible := false;
+     regRivn.Visible := false;
+     regTern.Visible := false;
+     regIvano.Visible := false;
+     regZhyt.Visible := false;
+     regChmeln.Visible := false;
+     regCherniv.Visible := false;
+     regChernih.Visible := false;
+     regKyivCity.Visible := false;
+     regKyiv.Visible := false;
+     regVin.Visible := false;
+     regSum.Visible := false;
+     regPolt.Visible := false;
+     regCherk.Visible := false;
+     regKha.Visible := false;
+     regDn.Visible := false;
+     regKyro.Visible := false;
+     regLuh.Visible := false;
+     regDon.Visible := false;
+     regZap.Visible := false;
+     regKher.Visible := false;
+     regMyk.Visible := false;
+     regOdes.Visible := false;
+     regCrimea.Visible := false;
+
+     statusVol.Visible := false;
+     statusLviv.Visible := false;
+     statusZak.Visible := false;
+     statusRivn.Visible := false;
+     statusTern.Visible := false;
+     statusIvano.Visible := false;
+     statusZhyt.Visible := false;
+     statusChmeln.Visible := false;
+     statusCherniv.Visible := false;
+     statusChernih.Visible := false;
+     statusKyivCity.Visible := false;
+     statusKyiv.Visible := false;
+     statusVin.Visible := false;
+     statusSum.Visible := false;
+     statusPolt.Visible := false;
+     statusCherk.Visible := false;
+     statusKha.Visible := false;
+     statusDn.Visible := false;
+     statusKyro.Visible := false;
+     statusLuh.Visible := false;
+     statusDon.Visible := false;
+     statusZap.Visible := false;
+     statusKher.Visible := false;
+     statusMyk.Visible := false;
+     statusOdes.Visible := false;
+     statusCrimea.Visible := false;
+
+{* Connect to server and get info *}
+
+
+end;
+
+procedure TForm1.CheckBox1Click(Sender: TObject);
+begin
+     if checkbox1.checked = true then
+     begin
+       regVol.Visible := true;
+       statusVol.Visible := true;
+     end
+     else if checkbox1.checked = false then
+     begin
+       regVol.Visible := false;
+       statusVol.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox3Click(Sender: TObject);
+begin
+     if checkbox3.checked = true then
+     begin
+       regZak.Visible := true;
+       statusZak.Visible := true;
+     end
+     else if checkbox3.checked = false then
+     begin
+       regZak.Visible := false;
+       statusZak.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox5Click(Sender: TObject);
+begin
+     if checkbox5.checked = true then
+     begin
+       regTern.Visible := true;
+       statusTern.Visible := true;
+     end
+     else if checkbox5.checked = false then
+     begin
+       regTern.Visible := false;
+       statusTern.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox7Click(Sender: TObject);
+begin
+     if checkbox7.checked = true then
+     begin
+       regZhyt.Visible := true;
+       statusZhyt.Visible := true;
+     end
+     else if checkbox7.checked = false then
+     begin
+       regZhyt.Visible := false;
+       statusZhyt.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox13Click(Sender: TObject);
+begin
+     if checkbox13.checked = true then
+     begin
+       regVin.Visible := true;
+       statusVin.Visible := true;
+     end
+     else if checkbox13.checked = false then
+     begin
+       regVin.Visible := false;
+       statusVin.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox15Click(Sender: TObject);
+begin
+     if checkbox15.checked = true then
+     begin
+       regPolt.Visible := true;
+       statusPolt.Visible := true;
+     end
+     else if checkbox15.checked = false then
+     begin
+       regPolt.Visible := false;
+       statusPolt.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox17Click(Sender: TObject);
+begin
+     if checkbox17.checked = true then
+     begin
+       regKha.Visible := true;
+       statusKha.Visible := true;
+     end
+     else if checkbox17.checked = false then
+     begin
+       regKha.Visible := false;
+       statusKha.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox18Click(Sender: TObject);
+begin
+     if checkbox18.checked = true then
+     begin
+       regDn.Visible := true;
+       statusDn.Visible := true;
+     end
+     else if checkbox18.checked = false then
+     begin
+       regDn.Visible := false;
+       statusDn.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox19Click(Sender: TObject);
+begin
+     if checkbox19.checked = true then
+     begin
+       regKyro.Visible := true;
+       statusKyro.Visible := true;
+     end
+     else if checkbox19.checked = false then
+     begin
+       regKyro.Visible := false;
+       statusKyro.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox20Click(Sender: TObject);
+begin
+     if checkbox20.checked = true then
+     begin
+       regLuh.Visible := true;
+       statusLuh.Visible := true;
+     end
+     else if checkbox20.checked = false then
+     begin
+       regLuh.Visible := false;
+       statusLuh.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox21Click(Sender: TObject);
+begin
+     if checkbox21.checked = true then
+     begin
+       regDon.Visible := true;
+       statusDon.Visible := true;
+     end
+     else if checkbox21.checked = false then
+     begin
+       regDon.Visible := false;
+       statusDon.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox24Click(Sender: TObject);
+begin
+     if checkbox24.checked = true then
+     begin
+       regMyk.Visible := true;
+       statusMyk.Visible := true;
+     end
+     else if checkbox24.checked = false then
+     begin
+       regMyk.Visible := false;
+       statusMyk.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox25Click(Sender: TObject);
+begin
+     if checkbox25.checked = true then
+     begin
+       regOdes.Visible := true;
+       statusOdes.Visible := true;
+     end
+     else if checkbox25.checked = false then
+     begin
+       regOdes.Visible := false;
+       statusOdes.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox2Click(Sender: TObject);
+begin
+     if checkbox2.checked = true then
+     begin
+       regLviv.Visible := true;
+       statusLviv.Visible := true;
+     end
+     else if checkbox2.checked = false then
+     begin
+       regLviv.Visible := false;
+       statusLviv.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox4Click(Sender: TObject);
+begin
+     if checkbox4.checked = true then
+     begin
+       regRivn.Visible := true;
+       statusRivn.Visible := true;
+     end
+     else if checkbox4.checked = false then
+     begin
+       regRivn.Visible := false;
+       statusRivn.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox6Click(Sender: TObject);
+begin
+     if checkbox6.checked = true then
+     begin
+       regIvano.Visible := true;
+       statusIvano.Visible := true;
+     end
+     else if checkbox6.checked = false then
+     begin
+       regIvano.Visible := false;
+       statusIvano.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox12Click(Sender: TObject);
+begin
+     if checkbox12.checked = true then
+     begin
+       regKyiv.Visible := true;
+       statusKyiv.Visible := true;
+     end
+     else if checkbox12.checked = false then
+     begin
+       regKyiv.Visible := false;
+       statusKyiv.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox14Click(Sender: TObject);
+begin
+     if checkbox14.checked = true then
+     begin
+       regSum.Visible := true;
+       statusSum.Visible := true;
+     end
+     else if checkbox14.checked = false then
+     begin
+       regSum.Visible := false;
+       statusSum.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox16Click(Sender: TObject);
+begin
+     if checkbox16.checked = true then
+     begin
+       regCherk.Visible := true;
+       statusCherk.Visible := true;
+     end
+     else if checkbox16.checked = false then
+     begin
+       regCherk.Visible := false;
+       statusCherk.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox8Click(Sender: TObject);
+begin
+     if checkbox8.checked = true then
+     begin
+       regChmeln.Visible := true;
+       statusChmeln.Visible := true;
+     end
+     else if checkbox8.checked = false then
+     begin
+       regChmeln.Visible := false;
+       statusChmeln.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox9Click(Sender: TObject);
+begin
+     if checkbox9.checked = true then
+     begin
+       regCherniv.Visible := true;
+       statusCherniv.Visible := true;
+     end
+     else if checkbox9.checked = false then
+     begin
+       regCherniv.Visible := false;
+       statusCherniv.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox10Click(Sender: TObject);
+begin
+     if checkbox10.checked = true then
+     begin
+       regChernih.Visible := true;
+       statusChernih.Visible := true;
+     end
+     else if checkbox10.checked = false then
+     begin
+       regChernih.Visible := false;
+       statusChernih.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox11Click(Sender: TObject);
+begin
+     if checkbox11.checked = true then
+     begin
+       regKyivCity.Visible := true;
+       statusKyivCity.Visible := true;
+     end
+     else if checkbox11.checked = false then
+     begin
+       regKyivCity.Visible := false;
+       statusKyivCity.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox22Click(Sender: TObject);
+begin
+     if checkbox22.checked = true then
+     begin
+       regZap.Visible := true;
+       statusZap.Visible := true;
+     end
+     else if checkbox22.checked = false then
+     begin
+       regZap.Visible := false;
+       statusZap.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox23Click(Sender: TObject);
+begin
+     if checkbox23.checked = true then
+     begin
+       regKher.Visible := true;
+       statusKher.Visible := true;
+     end
+     else if checkbox23.checked = false then
+     begin
+       regKher.Visible := false;
+       statusKher.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox26Click(Sender: TObject);
+begin
+     if checkbox26.checked = true then
+     begin
+       regCrimea.Visible := true;
+       statusCrimea.Visible := true;
+     end
+     else if checkbox26.checked = false then
+     begin
+       regCrimea.Visible := false;
+       statusCrimea.Visible := false;
+     end;
+end;
+
+procedure TForm1.CheckBox27Click(Sender: TObject);
+begin
+     if checkbox27.checked = true then
+     begin
+     checkbox1.enabled := false;
+     checkbox1.checked := false;
+     checkbox2.enabled := false;
+     checkbox2.checked := false;
+     checkbox3.enabled := false;
+     checkbox3.checked := false;
+     checkbox4.enabled := false;
+     checkbox4.checked := false;
+     checkbox5.enabled := false;
+     checkbox5.checked := false;
+     checkbox6.enabled := false;
+     checkbox6.checked := false;
+     checkbox7.enabled := false;
+     checkbox7.checked := false;
+     checkbox8.enabled := false;
+     checkbox8.checked := false;
+     checkbox9.enabled := false;
+     checkbox9.checked := false;
+     checkbox10.enabled := false;
+     checkbox10.checked := false;
+     checkbox11.enabled := false;
+     checkbox11.checked := false;
+     checkbox12.enabled := false;
+     checkbox12.checked := false;
+     checkbox13.enabled := false;
+     checkbox13.checked := false;
+     checkbox14.enabled := false;
+     checkbox14.checked := false;
+     checkbox15.enabled := false;
+     checkbox15.checked := false;
+     checkbox16.enabled := false;
+     checkbox16.checked := false;
+     checkbox17.enabled := false;
+     checkbox17.checked := false;
+     checkbox18.enabled := false;
+     checkbox18.checked := false;
+     checkbox19.enabled := false;
+     checkbox19.checked := false;
+     checkbox20.enabled := false;
+     checkbox20.checked := false;
+     checkbox21.enabled := false;
+     checkbox21.checked := false;
+     checkbox22.enabled := false;
+     checkbox22.checked := false;
+     checkbox23.enabled := false;
+     checkbox23.checked := false;
+     checkbox24.enabled := false;
+     checkbox24.checked := false;
+     checkbox25.enabled := false;
+     checkbox25.checked := false;
+     checkbox26.enabled := false;
+     checkbox26.checked := false;
+
+     regVol.Visible := true;
+     regLviv.Visible := true;
+     regZak.Visible := true;
+     regRivn.Visible := true;
+     regTern.Visible := true;
+     regIvano.Visible := true;
+     regZhyt.Visible := true;
+     regChmeln.Visible := true;
+     regCherniv.Visible := true;
+     regChernih.Visible := true;
+     regKyivCity.Visible := true;
+     regKyiv.Visible := true;
+     regVin.Visible := true;
+     regSum.Visible := true;
+     regPolt.Visible := true;
+     regCherk.Visible := true;
+     regKha.Visible := true;
+     regDn.Visible := true;
+     regKyro.Visible := true;
+     regLuh.Visible := true;
+     regDon.Visible := true;
+     regZap.Visible := true;
+     regKher.Visible := true;
+     regMyk.Visible := true;
+     regOdes.Visible := true;
+     regCrimea.Visible := true;
+
+     statusVol.Visible := true;
+     statusLviv.Visible := true;
+     statusZak.Visible := true;
+     statusRivn.Visible := true;
+     statusTern.Visible := true;
+     statusIvano.Visible := true;
+     statusZhyt.Visible := true;
+     statusChmeln.Visible := true;
+     statusCherniv.Visible := true;
+     statusChernih.Visible := true;
+     statusKyivCity.Visible := true;
+     statusKyiv.Visible := true;
+     statusVin.Visible := true;
+     statusSum.Visible := true;
+     statusPolt.Visible := true;
+     statusCherk.Visible := true;
+     statusKha.Visible := true;
+     statusDn.Visible := true;
+     statusKyro.Visible := true;
+     statusLuh.Visible := true;
+     statusDon.Visible := true;
+     statusZap.Visible := true;
+     statusKher.Visible := true;
+     statusMyk.Visible := true;
+     statusOdes.Visible := true;
+     statusCrimea.Visible := true;
+     end
+     else if checkbox27.checked = false then
+     begin
+     checkbox1.enabled := true;
+     checkbox2.enabled := true;
+     checkbox3.enabled := true;
+     checkbox4.enabled := true;
+     checkbox5.enabled := true;
+     checkbox6.enabled := true;
+     checkbox7.enabled := true;
+     checkbox8.enabled := true;
+     checkbox9.enabled := true;
+     checkbox10.enabled := true;
+     checkbox11.enabled := true;
+     checkbox12.enabled := true;
+     checkbox13.enabled := true;
+     checkbox14.enabled := true;
+     checkbox15.enabled := true;
+     checkbox16.enabled := true;
+     checkbox17.enabled := true;
+     checkbox18.enabled := true;
+     checkbox19.enabled := true;
+     checkbox20.enabled := true;
+     checkbox21.enabled := true;
+     checkbox22.enabled := true;
+     checkbox23.enabled := true;
+     checkbox24.enabled := true;
+     checkbox25.enabled := true;
+     checkbox26.enabled := true;
+
+     regVol.Visible := false;
+     regLviv.Visible := false;
+     regZak.Visible := false;
+     regRivn.Visible := false;
+     regTern.Visible := false;
+     regIvano.Visible := false;
+     regZhyt.Visible := false;
+     regChmeln.Visible := false;
+     regCherniv.Visible := false;
+     regChernih.Visible := false;
+     regKyivCity.Visible := false;
+     regKyiv.Visible := false;
+     regVin.Visible := false;
+     regSum.Visible := false;
+     regPolt.Visible := false;
+     regCherk.Visible := false;
+     regKha.Visible := false;
+     regDn.Visible := false;
+     regKyro.Visible := false;
+     regLuh.Visible := false;
+     regDon.Visible := false;
+     regZap.Visible := false;
+     regKher.Visible := false;
+     regMyk.Visible := false;
+     regOdes.Visible := false;
+     regCrimea.Visible := false;
+
+     statusVol.Visible := false;
+     statusLviv.Visible := false;
+     statusZak.Visible := false;
+     statusRivn.Visible := false;
+     statusTern.Visible := false;
+     statusIvano.Visible := false;
+     statusZhyt.Visible := false;
+     statusChmeln.Visible := false;
+     statusCherniv.Visible := false;
+     statusChernih.Visible := false;
+     statusKyivCity.Visible := false;
+     statusKyiv.Visible := false;
+     statusVin.Visible := false;
+     statusSum.Visible := false;
+     statusPolt.Visible := false;
+     statusCherk.Visible := false;
+     statusKha.Visible := false;
+     statusDn.Visible := false;
+     statusKyro.Visible := false;
+     statusLuh.Visible := false;
+     statusDon.Visible := false;
+     statusZap.Visible := false;
+     statusKher.Visible := false;
+     statusMyk.Visible := false;
+     statusOdes.Visible := false;
+     statusCrimea.Visible := false;
+     end;
+end;
+
+procedure TForm1.regKyivCityClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Kyiv City Region';
+end;
+
+procedure TForm1.regChernihClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Chernihiv Region';
+end;
+
+procedure TForm1.regKyivClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Kyiv Region';
+end;
+
+procedure TForm1.regZhytClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Zhytomyr Region';
+end;
+
+procedure TForm1.regRivnClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Rivne Region';
+end;
+
+procedure TForm1.regVolClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Volyn Region';
+end;
+
+procedure TForm1.regLvivClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Lviv Region';
+end;
+
+procedure TForm1.regZakClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Zakarpatskyy Region';
+end;
+
+procedure TForm1.regIvanoClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Ivano-Frankivsk Region';
+end;
+
+procedure TForm1.regChernivClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Chernivtsi Region';
+end;
+
+procedure TForm1.regTernClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Ternopil Region';
+end;
+
+procedure TForm1.regVinClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Vinnytsya Region';
+end;
+
+procedure TForm1.regOdesClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Odesa Region';
+end;
+
+procedure TForm1.regMykClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Mykolaiv Region';
+end;
+
+procedure TForm1.regKyroClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Kyrovogradskyy Region';
+end;
+
+procedure TForm1.regCherkClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Cherkasy Region';
+end;
+
+procedure TForm1.regPoltClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Poltava Region';
+end;
+
+procedure TForm1.regSumClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Sumy Region';
+end;
+
+procedure TForm1.regDnClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Dnipropetrovskyy Region';
+end;
+
+procedure TForm1.regKherClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Kherson Region';
+end;
+
+procedure TForm1.regCrimeaClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Crimea Region';
+end;
+
+procedure TForm1.regZapClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Zaporizhya Region';
+end;
+
+procedure TForm1.regDonClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Donetsk Region';
+end;
+
+procedure TForm1.regKhaClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Kharkiv Region';
+end;
+
+procedure TForm1.regLuhClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Luhansk Region';
+end;
+
+procedure TForm1.regChmelnClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Chmelnytskyy Region';
+end;
+
+procedure TForm1.deselectBtnClick(Sender: TObject);
+begin
+     hoverHint.Caption := 'Click on a point to see region name';
+end;
+
+procedure TForm1.Deselect1Click(Sender: TObject);
+begin
+     hoverHint.Caption := 'Click on a point to see region name';
+end;
+
+end.

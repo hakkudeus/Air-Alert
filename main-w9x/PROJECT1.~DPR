@@ -1,0 +1,16 @@
+program Project1;
+
+uses
+  Forms,
+  Airalert in 'AIRALERT.PAS' {Form1},
+  Unit2 in 'UNIT2.PAS' {AboutBox};
+
+{$R *.RES}
+
+begin
+  Application.Title := 'Air Alert';
+  Application.HelpFile := 'H:\airalert-95\hlpfile\help.hlp';
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TAboutBox, AboutBox);
+  Application.Run;
+end.
