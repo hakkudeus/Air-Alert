@@ -1,0 +1,14 @@
+#include <conio.h>
+#include <stdio.h>
+#include <dos.h>
+
+int main() {
+	int seconds = 0;
+	while (!kbhit()) {
+		gotoxy(1,1);
+		printf("Time: %d sec", seconds);
+		delay(10);
+		seconds++;
+	}
+	return 0;
+}

@@ -1,0 +1,77 @@
+Air Alert for MS-DOS 
+Codename: AIR4DOS
+
+-= SYSTEM REQUIREMENTS =-
+
+OS: MS-DOS 3.10 minimum
+CPU: Intel 8086 and higher
+RAM: 1 MB (4 MB for better performance)
+Video: 80x25 Mono/16 Colour or higher (Hercules/MDA, CGA, VGA and higher)
+Other: TCP/IP configured network card, clock/calendar chip
+
+Use of 256 Colour graphics adapter or better will neither improve nor worsen
+your experience.
+
+-= CHANGE LOG =-
+
+1.04 [Apr. 2025]
+* Now the program will exit if the date is incorrent (less than 24 Feb. 2022);
+* Fixed incorrect date calculation;
+
+1.03 [20 Feb. 2025]
+* MS-DOS version has been released;
+
+-= CONFIGURING NETWORK CONFIG =-
+
+This program relies on the HTGET executable that is a part of mTCP stack.
+
+If you have never used mTCP, it requires its config file to be specified 
+in autoexec.bat file of your DOS using a SET command. You do not need to 
+store full mTCP package on your hard disk, you only need the previously 
+mentioned file and DHCP.EXE tool if you wish to add IP settings 
+automatically.
+
+1) To install a config file, you can copy it from the installation media for
+this program to any directory you want and add the next line to autoexec.bat:
+
+set MTCPCFG = [DIRECTORY]\config.cfg
+
+Name and extension can be anything, it will be read successfully. 
+
+2) Next step is specifying packet manager interrupt integer (default: 0x60)
+in the config file. Then you will need to scroll to the bottom and input
+your IP settings manually, or as said before use a DHCP.EXE tool from mTCP
+package.
+
+-= DATE AND TIME =-
+
+It is necessary to have the correct date and optionally the time.
+
+If you have an incorrect date set on your PC, the program will exit with
+an according message. Date is being used in calculation that is displayed 
+on the screen and data receiving, thus having wrong date will corrupt it. 
+On the other hand, time may be set to any value if it meets the current 
+day frame.
+
+While running the app on pre-AT system and/or for example MS-DOS 3.10,
+make sure the date and time is being saved to your clock chip and you have
+the corresponding utilities to address the chip.
+
+Even though you are able to set the date before the real one, the 
+calculation will succeed, but the data will be still corrupted. The app 
+does not check the date and time using network, it is up to you.
+
+-= END =-
+
+Created by: KotsumeHaku
+Made in 2025
+
+Contact me at:
+https://kotsumehaku.bsky.app
+kotsumehaku@gmail.com
+
+Other versions available for: 
+MS-DOS, Windows 9x (supports both 86- and 64-bit machines).
+
+HTGET.EXE, DHCP.EXE and SAMPLE.CFG are part of mTCP TCP/IP stack and
+made by their respective creators. No changes to used external code was made. 
