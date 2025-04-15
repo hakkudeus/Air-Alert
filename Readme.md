@@ -77,7 +77,7 @@ If you plan to use my pre-built code, check up the requirements:
 ## mTCP dependency
 Due to my temporary inability to write own network connectivity (or to borrow it from somewhere else) built into my app, I have used one of mTCP apps to perform HTTP requests and a DHCP tool with the same origin.
 Thus it requires its config to be specified in your autoexec.bat file and NIC interrupt code written into it.
-I have written a quick guide on how to properly do it, it's in Release package's readme.
+I have written a quick guide on how to properly do it, it's in Release package's readme and here is part with explanations:
 
 >This program relies on the HTGET executable that is a part of mTCP stack.
 
@@ -90,7 +90,7 @@ automatically.
 >1) To install a config file, you can copy it from the installation media for
 this program to any directory you want and add the next line to autoexec.bat:
 
->set MTCPCFG = [DIRECTORY]\config.cfg
+>`set MTCPCFG = [DIRECTORY]\config.cfg`
 
 >Name and extension can be anything, it will be read successfully. 
 
@@ -100,6 +100,26 @@ your IP settings manually, or as said before use a DHCP.EXE tool from mTCP
 package
 
 As stated before, I have some plans to make the app independent from external executables and their stuff, but it might take a while.
+
+## Date and Time
+
+>It is necessary to have the correct date and optionally the time.
+
+>If you have an incorrect date set on your PC, the program will exit with
+an according message. Date is being used in calculation that is displayed 
+on the screen and data receiving, thus having wrong date will corrupt it. 
+On the other hand, time may be set to any value if it meets the current 
+day frame.
+
+>While running the app on pre-AT system and/or for example MS-DOS 3.10,
+make sure the date and time is being saved to your clock chip and you have
+the corresponding utilities to address the chip.
+
+>Even though you are able to set the date before the real one, the 
+calculation will succeed, but the data will be still corrupted. The app 
+does not check the date and time using network, it is up to you.
+
+To prevent garbage data, I have added a kill-switch that exits the program if the year is set to less than 2023 (in newer versions, it's set to 24.02.2022).
 
 # Pre-packaged contents
 If you have decided to download a pre-built package by me, you may have noticed it comes in two variants (since v. 1.0.1):
