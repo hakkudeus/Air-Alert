@@ -73,8 +73,15 @@ If you plan to use my pre-built code, check up the requirements:
 ⁴ Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip.
 
 ⁵ An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
+# mTCP dependency (on MS-DOS)
+Due to temporary inability to write own network connectivity (or to borrow it from somewhere else) built into my app, I have used one of mTCP apps to perform HTTP requests and a DHCP tool with the same origin.
+Thus it requires its config to be specified in your autoexec.bat file and NIC interrupt code written into it.
+I have written a quick guide on how to properly do it, it's in Release package's readme.
+
+As stated before, I have some plans to make the app independent from external executables and their stuff, but it might take a while.
+
 # Pre-packaged contents
-If you have decided to download a pre-built package by me, you may have noticed it comes in two variants:
+If you have decided to download a pre-built package by me, you may have noticed it comes in two variants (since v. 1.0.1):
 - IMA Floppy Image - authentical 1.44M image for retro workstation;
 - ZIP Archive - for modern machines to be run out-of-box;
 Their contents should be the same, including the app itself, "promo" materials, help files and installers. It does **not** come with source code.
