@@ -70,7 +70,7 @@ If you plan to use my pre-built code, check up the requirements:
 
 ³ CGA video card may work too, if it supports somewhat close to specified resolution and 16 Colors. 
 
-⁴ Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip.
+⁴ Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip. More info in the next chapter below.
 
 ⁵ An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
 # Notes on MS-DOS
