@@ -34,6 +34,7 @@ If you plan to build the app yourself, I would recommend using original environm
 |16 Color Support      |`By Default`|`⚒ In progress`|`?`|
 |Settings Menu|`-`|`⚒ In progress`|`?`|
 |Rewrite in C|`⚒ To be planned`|`✅ Already on C`|`?`|
+
 A third branch is being planned to add Windows 3.11 support, however it's in too early stage and may be merged with one of previous ones/use their features or ideas. 
 # System Requirement
 If you plan to use my pre-built code, check up the requirements:
