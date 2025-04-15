@@ -45,6 +45,7 @@ If you plan to use my pre-built code, check up the requirements:
 |RAM¹          |`4 MB`|
 |Graphics¹|`VGA-compatible video card (min. 640x480, 16 Color)`³
 |Network|`NIC with Internet access through TCP/IP`
+
 ² This includes all the OS'es, inluding Windows 98, 2000, ME, XP, Vista, 7, 8, 8.1, 10, 11, all in-betweens after 95 (builds, etc), plus it can run on Linux through Wine.
 
 |                |Secondary Branch       |
@@ -58,8 +59,11 @@ If you plan to use my pre-built code, check up the requirements:
 |Extra|`mTCP Config`⁵
 
 ¹ Some of parameters were not fully checked due to lack of real hardware and they were set to minimum OS requirements, so the real values may be even lower, like 486 Processor and etc.
+
 ³ CGA video card may work too, if it supports somewhat close to specified resolution and 16 Colors. 
+
 ⁴ Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip.
+
 ⁵ An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
 # Outro
 You contact me here through:
