@@ -1,5 +1,5 @@
 # Air Alert
-Air Alert is a hobbyist project made to improve my coding skills and learn more about old Windows (r) OS'es (especially 9x and 3.x) and DOS-like plus their networking capabilities.
+Air Alert is a homemade project made to improve my coding skills and learn more about old Windows (r) OS'es (especially 9x and 3.x) and DOS-like plus their networking capabilities.
 
 I am NOT a professional coder, so I may have done basic mistakes and one of motivations to publish the source code was to improve the app with help of others and myself included.
 
