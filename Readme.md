@@ -1,11 +1,11 @@
 # Air Alert
 Air Alert is a hobbyist project made to improve my coding skills and learn more about old Windows (r) OS'es (especially 9x and 3.x) and DOS-like plus their networking capabilities.
 
-![](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:d4dutltyznlhk2m7kv5t62c4/bafkreiht3pv2es3vfq6j2yf6z2xxufl2shnruy26bdcmjgqbeax7z52hry@jpeg)
-
 I am NOT a professional coder, so I may have done basic mistakes and one of motivations to publish the source code was to improve the app with help of others and myself included.
 
 Air Alert - is a live aerial threat tracker for Ukrainian territories, made as standalone Windows (r) app with old-fashioned design and environment. This app is aimed at retro-PC fans, just like me.
+
+![](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:d4dutltyznlhk2m7kv5t62c4/bafkreiht3pv2es3vfq6j2yf6z2xxufl2shnruy26bdcmjgqbeax7z52hry@jpeg)
 
 # Disclaimer
 As you may seen from the source code, it uses unofficial (currently) data source and it may be unreliable and as of now it lacks one of features, including:
