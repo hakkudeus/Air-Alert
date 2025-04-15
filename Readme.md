@@ -25,7 +25,9 @@ If you plan to build the app yourself, I would recommend using original environm
 |Dependencies          |`IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP, IdTime, Windows, IdException, plus 14 more` | `stdio, string, dos, stdlib, conio, time`           |
 |External          |`-`|`mTCP TCP/IP Stack, ANSI.SYS/EXE`|
 
-"Smart Install Maker" was used to create an installer for main branch releases.
+["Smart Install Maker"](http://www.sminstall.com/) was used to create an installer and ["HelpNDoc"](https://www.helpndoc.com/) to make help files for main branch releases.
+Currently planning to switch to NSIS or InstallShield.
+
 # Development Goals
 |                |Main Branch (Windows 9x)       | Secondary Branch (MS-DOS)| Third Branch (W3.11)|
 |----------------|-------------------------------|-|-|
