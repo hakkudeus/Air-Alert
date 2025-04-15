@@ -11,7 +11,7 @@ Air Alert - is a live aerial threat tracker for Ukrainian territories, made as s
 As you may seen from the source code, it uses unofficial (currently) data source and it may be unreliable and as of now it lacks one of features, including:
 * threat status for Crimea;
 * sub-region threat statuses;
-> **Do not** use this app as a main source of information. You may put as a demonstration piece on your retro-workstation, however consider checking with official/professional sources.
+> **Do not** use this app as a main source of information. You may put it as a demonstration piece on your retro-workstation, however consider checking with official/professional sources.
  
 Windows Defender might report the installer/app on modern OS'es (Windows 10 & 11) as suspicious due to (as far as i can guess) lack of digital certificates on executables. I have reported this issue to Microsoft, but if the problem persists and you know how to fix, let me know. 
 
