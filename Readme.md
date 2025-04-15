@@ -73,10 +73,31 @@ If you plan to use my pre-built code, check up the requirements:
 ⁴ Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip.
 
 ⁵ An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
-# mTCP dependency (on MS-DOS)
-Due to temporary inability to write own network connectivity (or to borrow it from somewhere else) built into my app, I have used one of mTCP apps to perform HTTP requests and a DHCP tool with the same origin.
+# Notes on MS-DOS
+## mTCP dependency
+Due to my temporary inability to write own network connectivity (or to borrow it from somewhere else) built into my app, I have used one of mTCP apps to perform HTTP requests and a DHCP tool with the same origin.
 Thus it requires its config to be specified in your autoexec.bat file and NIC interrupt code written into it.
 I have written a quick guide on how to properly do it, it's in Release package's readme.
+
+>This program relies on the HTGET executable that is a part of mTCP stack.
+
+>If you have never used mTCP, it requires its config file to be specified 
+in autoexec.bat file of your DOS using a SET command. You do not need to 
+store full mTCP package on your hard disk, you only need the previously 
+mentioned file and DHCP.EXE tool if you wish to add IP settings 
+automatically.
+
+>1) To install a config file, you can copy it from the installation media for
+this program to any directory you want and add the next line to autoexec.bat:
+
+>set MTCPCFG = [DIRECTORY]\config.cfg
+
+>Name and extension can be anything, it will be read successfully. 
+
+>2) Next step is specifying packet manager interrupt integer (default: 0x60)
+in the config file. Then you will need to scroll to the bottom and input
+your IP settings manually, or as said before use a DHCP.EXE tool from mTCP
+package
 
 As stated before, I have some plans to make the app independent from external executables and their stuff, but it might take a while.
 
