@@ -72,7 +72,7 @@ If you plan to use my pre-built code, check up the requirements:
 
 ^3 It can run on pretty much all MS-DOS versions, however older than 3.10 were not tested. It can also run on OS'es *with DOS apps support*, which includes Windows 95, 98, 2000, ME and XP. Windows 3.x is out of this list, unfortunately it won't work - it's quite complicated.
 
-^4 CGA video card may work too, if it supports somewhat close to specified resolution and 16 Colors. 
+^4 Monochrome adapter will be enough for now, since there are no colors in the app yet. CGA video card may work too, if it supports somewhat close to specified resolution and 16 Colors. 
 
 ^5 Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip. More info in the next chapter below.
 
