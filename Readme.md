@@ -12,7 +12,7 @@ However, it does not surpass the official sources; in some cases, lacks some fun
 ![](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:d4dutltyznlhk2m7kv5t62c4/bafkreiht3pv2es3vfq6j2yf6z2xxufl2shnruy26bdcmjgqbeax7z52hry@jpeg)
 
 # Disclaimer
-As you may seen from the source code, it uses unofficial (currently) data source and it may be unreliable and as of now it lacks one of features, including:
+As you may have seen from the source code, it uses unofficial (currently) data source and it may be unreliable and as of now it lacks one of features, including:
 * threat status for Crimea;
 * sub-region threat statuses;
 > **Do not** use this app as a main source of information. You may put it as a demonstration piece on your retro-workstation, however consider checking with official/professional sources.
@@ -26,7 +26,7 @@ If you plan to build the app yourself, I would recommend using original environm
 |----------------|-------------------------------|-----------------------------|
 |Environment|`Borland Delphi 6.0`            |`Borland Turbo C (4.5)`            |
 |Language|`Delphi (Object Pascal)`|`C (for app) and Batch script (for installer)`|
-|Dependencies          |`IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP, IdTime, Windows, IdException, plus 14 more` | `stdio, string, dos, stdlib, conio, time`           |
+|Dependencies          |`Basic Components (IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP, IdTime, Windows, IdException, plus 14 more)` | `stdio, string, dos, stdlib, conio, time`           |
 |External          |`-`|`mTCP TCP/IP Stack, ANSI.SYS/EXE`|
 
 ["Smart Install Maker"](http://www.sminstall.com/) was used to create an installer and ["HelpNDoc"](https://www.helpndoc.com/) to make help files for main branch releases.
@@ -41,6 +41,8 @@ Currently planning to switch to NSIS or InstallShield.
 |16 Color Support      |`By Default`|`⚒ In progress`|`?`|
 |Settings Menu|`-`|`⚒ In progress`|`?`|
 |Don't rely on mTCP|`-`|`⚒ To be planned`|`?`|
+|Fullscreen Mode|`?`|`By Default`|`?`|
+|No Connection detector|`✅ Pauses the program`|`⚒ To be planned`|`?`|
 |Rewrite in C|`⚒ To be planned`|`✅ Already on C`|`?`|
 
 A third branch is being planned to add Windows 3.11 support, however it's in too early stage and may be merged with one of previous ones/use their features or ideas. 
@@ -58,21 +60,23 @@ If you plan to use my pre-built code, check up the requirements:
 
 |                |Secondary Branch       |
 |----------------|-------------------------------|
-|OS|`MS-DOS 3.10 or greater`            |
+|OS|`MS-DOS 3.10 or greater`^3           |
 |Processor¹   |`Intel 8086`            |
 |RAM¹          |`1 MB`|
-|Graphics¹|`80x25 Monochrome or VGA-compatible video card (16 Color)`³
+|Graphics¹|`80x25 Monochrome or VGA-compatible video card (16 Color)`^4
 |Network|`NIC with Internet access through TCP/IP`
-|Hardware|`Clock/calendar chip`⁴|
-|Extra|`mTCP Config`⁵
+|Hardware|`Clock/calendar chip`^5|
+|Extra|`mTCP Config`^6
 
 ¹ Some of parameters were not fully checked due to lack of real hardware and they were set to minimum OS requirements, so the real values may be even lower, like 486 Processor and etc.
 
-³ CGA video card may work too, if it supports somewhat close to specified resolution and 16 Colors. 
+^3 It can run on pretty much all MS-DOS versions, however older than 3.10 were not tested. It can also run on OS'es *with DOS apps support*, which includes Windows 95, 98, 2000, ME and XP. Windows 3.x is out of this list, unfortunately it won't work - it's quite complicated.
 
-⁴ Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip. More info in the next chapter below.
+^4 CGA video card may work too, if it supports somewhat close to specified resolution and 16 Colors. 
 
-⁵ An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
+^5 Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip. More info in the next chapter below.
+
+^6 An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
 # Notes on MS-DOS
 ## mTCP dependency
 Due to my temporary inability to write own network connectivity (or to borrow it from somewhere else) built into my app, I have used one of mTCP apps to perform HTTP requests and a DHCP tool with the same origin.
