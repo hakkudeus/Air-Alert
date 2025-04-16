@@ -47,6 +47,14 @@ Currently planning to switch to NSIS or InstallShield.
 
 A third branch is being planned to add Windows 3.11 support, however it's in too early stage and may be merged with one of previous ones/use their features or ideas. 
 # Features
+* Graphical map with active regions displayed;
+* Auto and manual update;
+* Date & time display;
+* Graphical time icons;
+* Status list by regions;
+* Help file and installer;
+  
+![bafkreibaa4cxif6cpb34rxuszt4jl2qy3yvn3ftxoauqjbktfshkaq5mvm](https://github.com/user-attachments/assets/50809efe-c551-49c1-b9ea-95fd543ce4ce)
 
 # System Requirements
 If you plan to use my pre-built code, check up the requirements:
