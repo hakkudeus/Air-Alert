@@ -1,10 +1,10 @@
 # Air Alert
-> **Do not** use this app as a main source of information. You may put it as a demonstration piece on your retro-workstation, however consider checking with official/professional sources.
+> **Do not** use this app as a main source of information. You may put it as a demonstration piece on your retro-workstation, however consider always checking official/professional sources.
 
 Air Alert is a homemade project made to improve my coding skills and learn more about old Windows (r) OS'es (especially 9x and 3.x) and DOS-like plus their networking capabilities.
 This app is aimed at retro-PC fans, just like me.
 
-I am NOT a professional coder, so I may have done basic mistakes and one of motivations to publish the source code was to improve the app with help of others and myself included.
+I am not a professional coder, so I may have done basic mistakes so one of motivations to publish the source code was to improve the app with help of others and myself included.
 
 **Air Alert** - is a live aerial threat tracker for Ukrainian territories, made as standalone Windows (r) app with old-fashioned design and environment. 
 However, it does not surpass the official sources; in some cases, lacks some functionality: read the disclaimer.
@@ -13,9 +13,9 @@ However, it does not surpass the official sources; in some cases, lacks some fun
 
 # Disclaimer
 As you may have seen from the source code, it uses unofficial (currently) data source and it may be unreliable and as of now it lacks one of features, including:
-* threat status for Crimea;
-* sub-region threat statuses;
-> **Do not** use this app as a main source of information. You may put it as a demonstration piece on your retro-workstation, however consider checking with official/professional sources.
+* threat status for Crimea (it's always set to on, as of now);
+* sub-regions threat statuses;
+> **Do not** use this app as a main source of information. You may put it as a demonstration piece on your retro-workstation, however consider always checking official/professional sources.
  
 Windows Defender might report the installer/app on modern OS'es (Windows 10 & 11) as suspicious due to (as far as i can guess) lack of digital certificates on executables. I have reported this issue to Microsoft, but if the problem persists and you know how to fix, let me know. 
 
@@ -46,6 +46,8 @@ Currently planning to switch to NSIS or InstallShield.
 |Rewrite in C|`⚒ To be planned`|`✅ Already on C`|`?`|
 
 A third branch is being planned to add Windows 3.11 support, however it's in too early stage and may be merged with one of previous ones/use their features or ideas. 
+# Features
+
 # System Requirements
 If you plan to use my pre-built code, check up the requirements:
 |                |Main Branch       |
@@ -56,27 +58,27 @@ If you plan to use my pre-built code, check up the requirements:
 |Graphics¹|`VGA-compatible video card (min. 640x480, 16 Color)`³
 |Network|`NIC with Internet access through TCP/IP`
 
-² This includes all the OS'es, inluding Windows 98, 2000, ME, XP, Vista, 7, 8, 8.1, 10, 11, all in-betweens after 95 (builds, etc), plus it can run on Linux through Wine.
+² This includes all the OS'es, including Windows 98, 2000, ME, XP, Vista, 7, 8, 8.1, 10, 11, all in-betweens after 95 (builds, etc), plus it can run on Linux through Wine.
 
 |                |Secondary Branch       |
 |----------------|-------------------------------|
-|OS|`MS-DOS 3.10 or greater`^3           |
+|OS|`MS-DOS 3.10 or greater`³           |
 |Processor¹   |`Intel 8086`            |
 |RAM¹          |`1 MB`|
-|Graphics¹|`80x25 Monochrome or VGA-compatible video card (16 Color)`^4
+|Graphics¹|`80x25 Monochrome or VGA-compatible video card (16 Color)`⁴
 |Network|`NIC with Internet access through TCP/IP`
-|Hardware|`Clock/calendar chip`^5|
-|Extra|`mTCP Config`^6
+|Hardware|`Clock/calendar chip`⁵|
+|Extra|`mTCP Config`⁶
 
 ¹ Some of parameters were not fully checked due to lack of real hardware and they were set to minimum OS requirements, so the real values may be even lower, like 486 Processor and etc.
 
-^3 It can run on pretty much all MS-DOS versions, however older than 3.10 were not tested. It can also run on OS'es *with DOS apps support*, which includes Windows 95, 98, 2000, ME and XP. Windows 3.x is out of this list, unfortunately it won't work - it's quite complicated.
+³ It can run on pretty much all MS-DOS versions, however older than 3.10 were not tested. It can also run on OS'es *with DOS apps support*, which includes Windows 95, 98, 2000, ME and XP. Windows 3.x is out of this list, unfortunately it won't work - it's quite complicated.
 
-^4 Monochrome adapter will be enough for now, since there are no colors in the app yet. CGA video card may work too, if it supports somewhat close to specified resolution and 16 Colors. 
+⁴ Monochrome adapter will be enough for now, since there are no colors in the app yet. CGA video card may work too, if it supports somewhat close to specified resolution and 16 Colors. 
 
-^5 Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip. More info in the next chapter below.
+⁵ Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip. More info in the next chapter below.
 
-^6 An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
+⁶ An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
 # Notes on MS-DOS
 ## mTCP dependency
 Due to my temporary inability to write own network connectivity (or to borrow it from somewhere else) built into my app, I have used one of mTCP apps to perform HTTP requests and a DHCP tool with the same origin.
@@ -128,8 +130,8 @@ To prevent garbage data, I have added a kill-switch that exits the program if th
 # Pre-packaged contents
 If you have decided to download a pre-built package by me, you may have noticed it comes in two variants (since v. 1.0.1):
 - IMA Floppy Image - authentical 1.44M image for retro workstation;
-- ZIP Archive - for modern machines to be run out-of-box;
-Their contents should be the same, including the app itself, "promo" materials, help files and installers. It does **not** come with source code.
+- ZIP Archive - for modern machines, to be run out-of-box;
+Their contents should be the same, including the app itself, "promo" materials, help files and installers. Source code does **not** come with it.
 
 # Outro
 You contact me here through:
