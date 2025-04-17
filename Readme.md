@@ -89,7 +89,7 @@ If you plan to use my pre-built code, check up the requirements:
 |Hardware|`Clock/calendar chip`⁵|
 |Extra|`mTCP Config`⁶
 
-¹ Some of parameters were not fully checked due to lack of real hardware and they were set to minimum OS requirements, so the real values may be even lower, like 486 Processor and etc.
+¹ Some of the parameters were not fully checked due to lack of real hardware and they were set to minimum OS requirements, so the real values may be even lower, like 486 Processor and etc.
 
 ³ It can run on pretty much all MS-DOS versions, however older than 3.10 were not tested. It can also run on OS'es *with DOS apps support*, which includes Windows 95, 98, 2000, ME and XP. Windows 3.x is out of this list, unfortunately it won't work - it's quite complicated.
 
