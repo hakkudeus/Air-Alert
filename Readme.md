@@ -126,7 +126,7 @@ package
 
 As stated before, I have some plans to make the app independent from external executables and their stuff, but it might take a while.
 
-> tldr; you need an mTCP config with NIC packet manager interrupt code and DHCP (or manual IP & gateway address, etc) info in it to be written to your autoexec.bat file;
+***tldr;** you need an mTCP config with NIC packet manager interrupt code and DHCP (or manual IP & gateway address, etc) info in it to be written to your autoexec.bat file;*
 
 ## Date and Time
 
@@ -147,6 +147,8 @@ calculation will succeed, but the data will be still corrupted. The app
 does not check the date and time using network, it is up to you.
 
 To prevent garbage data, I have added a kill-switch that exits the program if the year is set to less than 2023 (in newer versions, it's set to 24.02.2022).
+
+***tldr;** set your date and (optionally) time correctly or somewhat close to it;*
 
 # Pre-packaged contents
 If you have decided to download a pre-built package by me, you may have noticed it comes in two variants (since v. 1.0.1):
