@@ -62,7 +62,7 @@ A third branch is being planned to add Windows 3.11 support, however it's in too
 * Pretty much the same features, except fullscreen only (for obvious reasons);
 * 16 Color **(coming soon)** and Monochrome Mode;
 * Ability to change graphical characters and their color **(coming soon)**;
-* Commonly used resolutions: 80x25, 80x50 **(coming soon)**;
+* Ability to change between 25 and 50 lines mode **(coming soon, 25 by default)**;
 
 ![image](https://github.com/user-attachments/assets/2007d5d4-dec5-4791-8d9b-a4ab6cb60e87)
 
