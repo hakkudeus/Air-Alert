@@ -101,8 +101,8 @@ If you plan to use my pre-built code, check up the requirements:
 # Notes on MS-DOS
 ## mTCP dependency
 Due to my temporary inability to write own network connectivity (or to borrow it from somewhere else) built into my app, I have used one of mTCP apps to perform HTTP requests and a DHCP tool with the same origin.
-Thus it requires its config to be specified in your autoexec.bat file and NIC interrupt code written into it.
-I have written a quick guide on how to properly do it, it's in Release package's readme and here is part with explanations:
+Thus it requires mTCP config to be specified in your autoexec.bat file and NIC interrupt code written into the first one.
+I have written a quick guide on how to properly do it, it's in Release package's readme and here is the part with explanations:
 
 >This program relies on the HTGET executable that is a part of mTCP stack.
 
@@ -125,6 +125,8 @@ your IP settings manually, or as said before use a DHCP.EXE tool from mTCP
 package
 
 As stated before, I have some plans to make the app independent from external executables and their stuff, but it might take a while.
+
+> tldr; you need an mTCP config with NIC packet manager interrupt code and DHCP (or manual IP & gateway address, etc) info in it to be written to your autoexec.bat file;
 
 ## Date and Time
 
