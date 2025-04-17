@@ -126,7 +126,7 @@ package
 
 As stated before, I have some plans to make the app independent from external executables and their stuff, but it might take a while.
 
-***tldr;** you need an mTCP config with NIC packet manager interrupt code and DHCP (or manual IP & gateway address, etc) info in it to be written to your autoexec.bat file;*
+***tldr;** you need an mTCP config with NIC packet manager interrupt code and DHCP (or manual IP & gateway address, etc) info into it and set the location of the config in your autoexec.bat file;*
 
 ## Date and Time
 
