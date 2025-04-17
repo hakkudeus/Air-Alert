@@ -48,6 +48,7 @@ Currently planning to switch to NSIS or InstallShield.
 A third branch is being planned to add Windows 3.11 support, however it's in too early stage and may be merged with one of previous ones/use their features or ideas. 
 # Features
 ## Windows 95+
+* Portable app "out-of-box" capabilities (additionally pre-made installer is provided);
 * Graphical map with active regions displayed;
 * Auto and manual update;
 * Date & time display;
