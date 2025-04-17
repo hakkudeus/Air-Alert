@@ -47,14 +47,25 @@ Currently planning to switch to NSIS or InstallShield.
 
 A third branch is being planned to add Windows 3.11 support, however it's in too early stage and may be merged with one of previous ones/use their features or ideas. 
 # Features
+## Windows 95+
 * Graphical map with active regions displayed;
 * Auto and manual update;
 * Date & time display;
 * Graphical time icons;
 * Status list by regions;
-* Help file and installer;
+* "Days since" counter;
+* Help file and installer (built with external tools);
   
 ![bafkreibaa4cxif6cpb34rxuszt4jl2qy3yvn3ftxoauqjbktfshkaq5mvm](https://github.com/user-attachments/assets/50809efe-c551-49c1-b9ea-95fd543ce4ce)
+
+## DOS
+* Pretty much the same features, except fullscreen only (for obvious reasons);
+* 16 Color **(coming soon)** and Monochrome Mode;
+* Ability to change graphical characters and their color **(coming soon)**;
+* Commonly used resolutions: 80x25, 80x50 **(coming soon)**;
+
+![image](https://github.com/user-attachments/assets/2007d5d4-dec5-4791-8d9b-a4ab6cb60e87)
+
 
 # System Requirements
 If you plan to use my pre-built code, check up the requirements:
