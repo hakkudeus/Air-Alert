@@ -1,6 +1,8 @@
 # Air Alert
 > **Do not** use this app as a main source of information. You may put it as a demonstration piece on your retro-workstation, however consider always checking official/professional sources.
 
+> **Notice:** The app is currently broken due to some API updated and some outdated that I currently cannot keep up with. DOS-version might take longer time to update its code.
+
 Air Alert is a homemade project made to improve my coding skills and learn more about old Windows (r) OS'es (especially 9x and 3.x) and DOS-like plus their networking capabilities.
 This app is aimed at retro-PC fans, just like me.
 
