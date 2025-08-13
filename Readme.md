@@ -17,7 +17,7 @@ As you may have seen from the source code, it uses unofficial (currently) data s
 * sub-regions threat statuses;
 > **Do not** use this app as a main source of information. You may put it as a demonstration piece on your retro-workstation, however consider always checking official/professional sources.
  
-Windows Defender might report the installer/app on modern OS'es (Windows 10 & 11) as suspicious due to (as far as i can guess) lack of digital certificates on executables. I have reported this issue to Microsoft, but if the problem persists and you know how to fix, let me know. 
+Windows Defender might report the installer/app on modern OS'es (Windows 10 & 11, or technically any other OS with an antivirus) as suspicious due to (as far as i can guess) lack of digital certificates on executables. I have reported this issue to Microsoft, but if the problem persists and you know how to fix, let me know. 
 
 # Build Requirements
 Currently, there are two "branches" of development with different code, platform and language.
@@ -88,7 +88,7 @@ If you plan to use my pre-built code, check up the requirements:
 |Graphics¹|`80x25 Monochrome or VGA-compatible video card (16 Color)`⁴
 |Network|`NIC with Internet access through TCP/IP`
 |Hardware|`Clock/calendar chip`⁵|
-|Extra|`mTCP Config`⁶
+|Extra|`mTCP Stack`⁶
 
 ¹ Some of the parameters were not fully checked due to lack of real hardware and they were set to minimum OS requirements, so the real values may be even lower, like 486 Processor and etc.
 
@@ -98,12 +98,12 @@ If you plan to use my pre-built code, check up the requirements:
 
 ⁵ Most modern motherboards include it by default, however on pre-AT machines or MS-DOS 3.10 (etc) it will require a setup solution to change date/time, if you have the chip. More info in the next chapter below.
 
-⁶ An installer will attempt to add own if none found and insert a SET value to autoexec.bat, in case you never/don't use mTCP stack.
+⁶ It is preferable to use mTCP stack as a networking tool here, due to hard-coded dependency of one of it's HTTP request apps. If mTCP was not found, an installer will attempt to add own and insert a SET value to autoexec.bat, in case you never/don't used the tool.
 # Notes on MS-DOS
 ## mTCP dependency
-Due to my temporary inability to write own network connectivity (or to borrow it from somewhere else) built into my app, I have used one of mTCP apps to perform HTTP requests and a DHCP tool with the same origin.
-Thus it requires mTCP config to be specified in your autoexec.bat file and NIC interrupt code written into the first one.
-I have written a quick guide on how to properly do it, it's in Release package's readme and here is the part with explanations:
+This project is currently tied to one of mTCP networking app's, namely HTGET, which performs HTTP requests. The reason why is mTCP stack required or its parts is due to needing of their config file, which specifies system interrupts and other values for your network card. Currently, I plan to modify the HTGET to be hardcoded onto a copy of mTCP config located at the app directory so it won't conflict with a real mTCP stack (except TSRs possibly) and won't confuse a user with an odd "mTCP" folder and an autoexec.bat string that he never installed.
+
+As of now, I have written a quick guide on how to properly install mTCP (config), it's in Release package's readme and here is the part with explanations:
 
 >This program relies on the HTGET executable that is a part of mTCP stack.
 
@@ -124,8 +124,6 @@ this program to any directory you want and add the next line to autoexec.bat:
 in the config file. Then you will need to scroll to the bottom and input
 your IP settings manually, or as said before use a DHCP.EXE tool from mTCP
 package
-
-As stated before, I have some plans to make the app independent from external executables and their stuff, but it might take a while.
 
 ***tldr;** you need an mTCP config with NIC packet manager interrupt code and DHCP (or manual IP & gateway address, etc) info into it and set the location of the config in your autoexec.bat file;*
 
@@ -156,6 +154,8 @@ If you have decided to download a pre-built package by me, you may have noticed 
 - IMA Floppy Image - authentical 1.44M image for retro workstation;
 - ZIP Archive - for modern machines, to be run out-of-box;
 Their contents should be the same, including the app itself, "promo" materials, help files and installers. Source code does **not** come with it.
+
+Planned: separate IMA into 2 editions: portable & full.
 
 # Outro
 You contact me here through:
