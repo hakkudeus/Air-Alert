@@ -1,5 +1,5 @@
 # Air Alert
-#### **Do not** use this app as a main source of information. This is an app made for my personal educational purposes, thus it may or may not add a significant delay while receiving data due to unoptimized code, outdated OS, lack of computing resources, etc; and it may not be addressed (fixed) by me instantly or quick enough, due to personal lack of time. As of now, it uses unofficial API, though in any case you should not 100% rely on this app. You may put it as a demonstration piece on your retro-workstation, however consider always checking official/professional sources.
+#### **Do not** use this app as a main source of information. This app is made for my personal educational purposes, thus it may or may not add a significant delay while receiving data due to unoptimized code, outdated OS, lack of computing resources, etc; and it may not be addressed (fixed) by me instantly or quick enough, due to personal lack of time. As of now, it uses unofficial API, though in any case you should not 100% rely on this app. You may put it as a demonstration piece on your retro-workstation, however consider always checking official/professional sources.
 
 > **Notice:** The app is currently broken due to some API being updated and some outdated that I currently cannot keep up with. DOS-version might take longer time to update its code.
 
