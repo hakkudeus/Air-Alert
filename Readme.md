@@ -13,6 +13,8 @@ However, it does not surpass the official sources; in some cases, lacks some fun
 
 ![](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:d4dutltyznlhk2m7kv5t62c4/bafkreiht3pv2es3vfq6j2yf6z2xxufl2shnruy26bdcmjgqbeax7z52hry@jpeg)
 
+> API Source: https://ubilling.net.ua
+
 # Disclaimer
 As you may have seen from the source code, it uses unofficial (currently) data source and it may be unreliable and as of now it lacks one of features, including:
 * threat status for Crimea (it's always set to on, as of now);
