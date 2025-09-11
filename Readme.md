@@ -13,7 +13,9 @@ However, it does not surpass the official sources; in some cases, lacks some fun
 
 ![](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:d4dutltyznlhk2m7kv5t62c4/bafkreiht3pv2es3vfq6j2yf6z2xxufl2shnruy26bdcmjgqbeax7z52hry@jpeg)
 
-> API Source: https://ubilling.net.ua
+#### API Source: https://ubilling.net.ua
+
+Why that source? Their endpoint requires no API keys, thus they are publically accessible. And while they transmit data in JSON, my app was hardcoded to look for specific values in plain text. Future plans include making my own endpoint which will communicate with this app the same HTTP plain-text way, however transmitted data would be way simplified and on much more flexible way.
 
 # Disclaimer
 As you may have seen from the source code, it uses unofficial (currently) data source and it may be unreliable and as of now it lacks one of features, including:
